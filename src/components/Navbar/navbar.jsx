@@ -1,0 +1,84 @@
+import React, { useState } from "react";
+import "./navbar.css";
+import headerlogo from "./tripsitelogo.png";
+import { FaStar, FaStarHalfAlt } from "react-icons/fa";
+import { Input, Space } from "antd";
+import ContactForm from "./contact";
+import { MdSms } from "react-icons/md";
+import { FaPhoneAlt } from "react-icons/fa";
+
+function Navbar() {
+  const [contactFormVisible, setContactFormVisible] = useState(false);
+
+  const handleContactClick = () => {
+    setContactFormVisible((prev) => !prev);
+  };
+  const handleIphone = () => {
+    window.location.href = "tel:+998912097907";
+  };
+
+  return (
+    <>
+      <header className="navbar">
+        {/* Logo */}
+        <div className="header-left">
+          <img src={headerlogo} alt="Trip Site Logo" className="logo" />
+
+          {/* Rating section */}
+          <div className="rating">
+            <span>4.6</span>
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStarHalfAlt />
+            <span className="reviews">Based on 5,939 reviews</span>
+          </div>
+        </div>
+
+        {/* Contact + Input + Language */}
+        <div className="header-right">
+          <div className="header-contact">
+            <button className="button-contact" onClick={handleContactClick}>
+              <MdSms />
+              Contact
+            </button>
+
+            <button  className="button-contact" onClick={handleIphone}>
+              {" "}
+              <FaPhoneAlt />
+              +998 91 209 79 07
+            </button>
+
+            <Space direction="vertical" size={10} className="inputs" >
+              <Input.Search  placeholder="Search by location or trip" />
+            </Space>
+
+            <select>
+              <option value="eng">ENG</option>
+              <option value="ru">RU</option>
+            </select>
+          </div>
+          <div className="header-nav">
+            <div className="nav-dev">
+              <p>BROWSE TOURS </p>
+            </div>
+            <div className="nav-dev">
+              <p>TRIP ESSENTIALS </p>
+            </div>
+            <div className="nav-dev">
+              <p>OUR STORY </p>
+            </div>
+            <div className="nav-dev">
+              <p>BLOG </p>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div className="header-line"></div>
+      {contactFormVisible && <ContactForm />}
+    </>
+  );
+}
+
+export default Navbar;

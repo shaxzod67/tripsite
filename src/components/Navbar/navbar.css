@@ -1,0 +1,132 @@
+/* Header umumiy */
+.navbar {
+  width: 100%;
+  height: 140px;
+  justify-content: center;
+  padding:40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+.header-line{
+  width: 100%;
+  height: 2px;
+  background-color: #fe653d;
+}
+/* Logo */
+.logo {
+  width: 170px;
+}
+.header-left {
+  width: 40%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid blue;
+  justify-content: space-evenly;
+}
+/* Rating section */
+.rating {
+  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid black;
+}
+
+.rating span {
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: bolder;
+  color: rgba(0, 0, 0, 0.559);
+}
+
+.rating .reviews{
+  font-size: 13px;
+  color: #fe653d;
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+/* Yulduzlar */
+.rating svg {
+  color: rgb(255, 183, 0);
+  font-size: 18px;
+}
+
+/* Header o‘ng qismi (Contact, Inputs, Language) */
+.header-right {
+  width: 60%;
+  height: 140px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: start;
+  gap: 10px;
+  border: 1px solid red;
+}
+.header-contact {
+  width: 70%;
+  height: 50px;
+  border-radius: 0 0px 10px 10px;
+  background-color: #fe653d;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  padding: 0 10px;
+}
+.header-nav{
+  width: 100%;
+  display: flex;
+  column-gap: 5px;
+  justify-content: space-between;
+  border: 1px solid red;
+}
+/* Ant Design inputlar uchun */
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Tugmalar */
+.header-right button {
+  padding: 5px 10px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 4px;
+}
+
+/* Select */
+.header-right select {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+.button-contact{
+  width: auto;
+  height: auto;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+  background-color: #fe653d !important;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid #fff;
+}
+.button-contact:hover{
+ 
+  background-color: #fff !important;
+  color: #fe653d;
+  border: 1px solid #fe653d;
+  transition: 0.7s;
+}
+
