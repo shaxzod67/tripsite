@@ -7,17 +7,21 @@ import ContactForm from "./contact";
 import { MdSms } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import Header from "../Header/header";
+import { IoMenu } from "react-icons/io5";
 
 function Navbar() {
   const [contactFormVisible, setContactFormVisible] = useState(false);
 
   // ✅ isActive state komponent darajasida bo‘lishi kerak
   const [isActive, setIsActive] = useState(false);
-  console.log("yes");
 
   const handleNavBarClick = () => {
     setIsActive((prev) => !prev); // toggle qilish
     // onClick={handleNavBarClick}    --> nav bar funksiyasi
+  };
+  const [navbar, setNavBar] = useState(false);
+  const handleMenuNavBarClick = () => {
+    setNavBar(!navbar);
   };
 
   const handleContactClick = () => {
@@ -33,12 +37,15 @@ function Navbar() {
       <header className="navbar">
         {/* Logo */}
         <div className="header-left">
+          <div className="menu-bar" onClick={handleMenuNavBarClick}>
+            <IoMenu />
+          </div>
           <img src={headerlogo} alt="Trip Site Logo" className="logo" />
 
           {/* Rating section */}
           <div className="rating">
             <div>
-            <span>4.6</span>
+              <span>4.6</span>
               <FaStar />
               <FaStar />
               <FaStar />
@@ -58,7 +65,9 @@ function Navbar() {
             </button>
 
             <button className="button-contact" onClick={handleIphone}>
-              <FaPhoneAlt /><span className="phone-media1">+ 998 91 209 79 07</span><span className="phone-media2">Call</span>
+              <FaPhoneAlt />
+              <span className="phone-media1">+ 998 91 209 79 07</span>
+              <span className="phone-media2">Call</span>
             </button>
 
             <Space direction="vertical" size={10} className="inputs">
@@ -70,7 +79,22 @@ function Navbar() {
               <option value="ru">RU</option>
             </select>
           </div>
-          <div className="header-nav">
+          {/* <div className="header-nav">
+            <div className="nav-dev">
+              <p>BROWSE TOURS</p>
+            </div>
+            <div className="nav-dev">
+              <p>TRIP ESSENTIALS </p>
+            </div>
+            <div className="nav-dev">
+              <p>OUR STORY </p>
+            </div>
+            <div className="nav-dev">
+              <p>BLOG </p>
+            </div>
+          </div> */}
+          {/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Nav Bar >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
+          <div className={navbar ? "header-nav-menu" : "header-nav"}>
             <div className="nav-dev">
               <p>BROWSE TOURS</p>
             </div>
@@ -84,6 +108,7 @@ function Navbar() {
               <p>BLOG </p>
             </div>
           </div>
+          {/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Nav Bar >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
         </div>
         <div className={isActive ? "active" : "noactive"}></div>
       </header>
