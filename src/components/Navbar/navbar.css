@@ -1,15 +1,15 @@
 /* Header umumiy */
+
 .navbar {
   width: 100%;
-  height: 140px;
-  justify-content: center;
-  padding:40px;
+  height: 120px;
+  padding: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
 }
-.header-line{
+.header-line {
   width: 100%;
   height: 2px;
   background-color: #fe653d;
@@ -25,7 +25,6 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  border: 1px solid blue;
   justify-content: space-evenly;
 }
 /* Rating section */
@@ -35,9 +34,10 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 5px;
-  border: 1px solid black;
 }
-
+.phone-media2 {
+  display: none;
+}
 .rating span {
   font-size: 16px;
   font-family: sans-serif;
@@ -45,7 +45,7 @@
   color: rgba(0, 0, 0, 0.559);
 }
 
-.rating .reviews{
+.rating .reviews {
   font-size: 13px;
   color: #fe653d;
   font-family: sans-serif;
@@ -61,13 +61,12 @@
 /* Header o‘ng qismi (Contact, Inputs, Language) */
 .header-right {
   width: 60%;
-  height: 140px;
+  height: 120px;
   display: flex;
   flex-wrap: wrap;
   align-items: start;
   justify-content: start;
   gap: 10px;
-  border: 1px solid red;
 }
 .header-contact {
   width: 70%;
@@ -79,12 +78,11 @@
   column-gap: 10px;
   padding: 0 10px;
 }
-.header-nav{
+.header-nav {
   width: 100%;
   display: flex;
   column-gap: 5px;
   justify-content: space-between;
-  border: 1px solid red;
 }
 /* Ant Design inputlar uchun */
 .inputs {
@@ -93,40 +91,211 @@
   gap: 8px;
 }
 
-/* Tugmalar */
-.header-right button {
-  padding: 5px 10px;
-  cursor: pointer;
-  border: 1px solid #ccc;
-  background-color: white;
-  border-radius: 4px;
-}
-
 /* Select */
 .header-right select {
   padding: 5px;
   border-radius: 4px;
   border: 1px solid #ccc;
-  background-color: white;
+  background-color: #fe653d;
+  color: #ccc;
+  outline: none;
 }
-.button-contact{
+.button-contact {
   width: auto;
   height: auto;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   column-gap: 5px;
-  background-color: #fe653d !important;
+  background-color: #fe653d;
   color: #fff;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
   border: 1px solid #fff;
+  padding: 7px;
+  border-radius: 4px;
 }
-.button-contact:hover{
- 
+.button-contact:hover {
   background-color: #fff !important;
   color: #fe653d;
   border: 1px solid #fe653d;
   transition: 0.7s;
 }
+/* .active {
+  width: 200px;
+  height: 300px;
+  background-color: #fe653d;
+}
+.noactive {
+  width: 200px;
+  height: 300px;
+  display: none;
+} */
 
+@media (max-width: 1024px) {
+  .navbar {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column; /* 🔑 yonma-yon emas, tagma-tag qilish */
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px; /* div’lar orasida masofa */
+  }
+
+  .header-left,
+  .header-right {
+    width: 100%; /* har ikkalasi 100% joy egallaydi */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .logo {
+    width: 120px;
+  }
+  .rating {
+    width: 20%;
+    gap: 3px;
+    margin-left: 10px;
+  }
+
+  .rating span {
+    font-size: 14px;
+  }
+  .rating .reviews {
+    font-size: 12px;
+  }
+
+  /* Yulduzlar */
+  .rating svg {
+    color: rgb(255, 183, 0);
+    font-size: 14px;
+  }
+  .header-right {
+    width: 90%;
+    height: 130px;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-contact {
+    width: 70%;
+    height: 55px;
+    border-radius: 8px;
+  }
+  .header-nav {
+    width: 90%;
+  }
+  .header-nav p {
+    color: #fe653d;
+    font-size: 14px;
+    font-family: sans-serif, monospace;
+    font-weight: bold;
+  }
+}
+@media (max-width: 870px) {
+  .navbar {
+    height: 200px;
+  }
+
+  .logo {
+    width: 140px;
+  }
+
+  .header-right {
+    width: 90%;
+    height: 130px;
+    align-items: end;
+    justify-content: center;
+  }
+  .header-contact {
+    width: 100%;
+    height: 55px;
+    border-radius: 8px;
+    background-color: #fff;
+    justify-content: space-evenly;
+  }
+  .header-nav {
+    width: 90%;
+    display: none;
+  }
+
+  .button-contact {
+    background-color: #fff;
+    color: #fe653d;
+    border: 1px solid #fe653d;
+  }
+
+  .button-contact:hover {
+    box-shadow: 0 0 12px rgba(106, 105, 105, 0.5);
+    border: 1px solid #fff;
+  }
+
+  .inputs {
+    display: none;
+  }
+  .header-right select {
+    background-color: #fff;
+    color: gray;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    height: 200px;
+  }
+
+  .logo {
+    width: 120px;
+  }
+  .header-left {
+    display: flex;
+    flex-direction: column;
+  }
+  .rating {
+    width: 80%;
+    gap: 3px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rating span {
+    font-size: 14px;
+  }
+  .rating .reviews {
+    font-size: 12px;
+  }
+
+  /* Yulduzlar */
+  .rating svg {
+    color: rgb(255, 183, 0);
+    font-size: 16px;
+  }
+  .header-right {
+    width: 90%;
+    height: 100px;
+    align-items: end;
+    justify-content: center;
+  }
+  .header-contact {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #fff;
+    justify-content: space-evenly;
+  }
+  .header-contact button {
+    width: 100px;
+  }
+  .header-nav {
+    width: 90%;
+    display: none;
+  }
+  .phone-media1 {
+    display: none;
+  }
+  .phone-media2 {
+    display: block;
+  }
+}

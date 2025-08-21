@@ -6,13 +6,24 @@ import { Input, Space } from "antd";
 import ContactForm from "./contact";
 import { MdSms } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
+import Header from "../Header/header";
 
 function Navbar() {
   const [contactFormVisible, setContactFormVisible] = useState(false);
 
+  // ✅ isActive state komponent darajasida bo‘lishi kerak
+  const [isActive, setIsActive] = useState(false);
+  console.log("yes");
+
+  const handleNavBarClick = () => {
+    setIsActive((prev) => !prev); // toggle qilish
+    // onClick={handleNavBarClick}    --> nav bar funksiyasi
+  };
+
   const handleContactClick = () => {
     setContactFormVisible((prev) => !prev);
   };
+
   const handleIphone = () => {
     window.location.href = "tel:+998912097907";
   };
@@ -26,12 +37,14 @@ function Navbar() {
 
           {/* Rating section */}
           <div className="rating">
+            <div>
             <span>4.6</span>
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStarHalfAlt />
+              <FaStar />
+              <FaStar />
+              <FaStar />
+              <FaStar />
+              <FaStarHalfAlt />
+            </div>
             <span className="reviews">Based on 5,939 reviews</span>
           </div>
         </div>
@@ -44,24 +57,22 @@ function Navbar() {
               Contact
             </button>
 
-            <button  className="button-contact" onClick={handleIphone}>
-              {" "}
-              <FaPhoneAlt />
-              +998 91 209 79 07
+            <button className="button-contact" onClick={handleIphone}>
+              <FaPhoneAlt /><span className="phone-media1">+ 998 91 209 79 07</span><span className="phone-media2">Call</span>
             </button>
 
-            <Space direction="vertical" size={10} className="inputs" >
-              <Input.Search  placeholder="Search by location or trip" />
+            <Space direction="vertical" size={10} className="inputs">
+              <Input.Search placeholder="Search by location or trip" />
             </Space>
 
             <select>
-              <option value="eng">ENG</option>
+              <option value="eng">EN</option>
               <option value="ru">RU</option>
             </select>
           </div>
           <div className="header-nav">
             <div className="nav-dev">
-              <p>BROWSE TOURS </p>
+              <p>BROWSE TOURS</p>
             </div>
             <div className="nav-dev">
               <p>TRIP ESSENTIALS </p>
@@ -74,9 +85,11 @@ function Navbar() {
             </div>
           </div>
         </div>
+        <div className={isActive ? "active" : "noactive"}></div>
       </header>
       <div className="header-line"></div>
       {contactFormVisible && <ContactForm />}
+      <Header />
     </>
   );
 }
