@@ -279,7 +279,7 @@
     width: 40%;
     height: 100vh; /* 🔑 butun ekranni yopish uchun */
     display: block;
-    position: fixed;
+    position: sticky;
     left: 0;
     top: 0;
     background-color: #fe653d;
