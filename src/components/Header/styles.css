@@ -1,33 +1,35 @@
-/* Swiper asosiy style */
-.swiper {
+/* Swiper umumiy style */
+.mySwiper,
+.mySwiper .swiper-wrapper,
+.mySwiper .swiper-slide {
   width: 100%;
-  height: 100%;
+  height: 100vh; /* Har bir slayd butun ekran balandligini oladi */
 }
 
+/* Har bir slayd */
 .swiper-slide {
-  height: 85vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #444;
 }
 
 /* Rasm konteyneri */
 .swiper-img {
   position: relative;
   width: 100%;
-  height: 100vh; /* butun ekran balandligi */
+  height: 100%; /* ota (slide) dan oladi */
   overflow: hidden;
 }
 
 .swiper-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* rasmni cho‘zmasdan ekranga moslaydi */
+  object-fit: cover;
   display: block;
 }
 
-/* Matn ustiga chiqishi uchun */
+/* Matn */
 .swiper-info {
   position: absolute;
   top: 50%;
@@ -37,10 +39,10 @@
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
-  z-index: 2;
+  z-index: 10; /* overlay ustida turishi uchun */
 }
 
-/* Qorong‘u overlay */
+/* Qorong'u overlay */
 .swiper-img::after {
   content: "";
   position: absolute;
@@ -48,40 +50,39 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.59);
-  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1; /* matndan pastda */
 }
+
+/* Tugma */
 .swiper-info button {
-  width: auto;
-  height: auto;
   padding: 12px 20px;
   background-color: #fe653d;
   border: none;
   border-radius: 4px;
   color: #fff;
   font-size: 16px;
-  margin-top: 50px;
+  margin-top: 30px;
+  cursor: pointer;
 }
 
+/* Moslashuvchanlik */
 @media (max-width: 870px) {
+  .swiper-info {
+    font-size: 1.75rem;
+  }
   .swiper-info button {
     font-size: 14px;
-    margin-top: 30px;
-  }
-  
-  .swiper-info {
-    font-size: 28px;
-    left: 50%;
+    margin-top: 20px;
   }
 }
+
 @media (max-width: 500px) {
+  .swiper-info {
+    font-size: 1.5rem;
+  }
   .swiper-info button {
     font-size: 14px;
-    margin-top: 10px;
-  }
-  
-  .swiper-info {
-    font-size: 24px;
-    left: 50%;
+    margin-top: 15px;
   }
 }

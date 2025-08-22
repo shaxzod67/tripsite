@@ -38,7 +38,7 @@ function Collections() {
 
   return (
     <>
-      <Swiper
+      <Swiper className="swiper-collection"
         modules={[Virtual, Navigation, Pagination, Autoplay]}
         onSwiper={setSwiperRef}
         slidesPerView={3}
