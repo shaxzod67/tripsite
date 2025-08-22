@@ -1,24 +1,74 @@
-
+/* Swiper asosiy style */
 .swiper {
   width: 100%;
   height: 100%;
 }
 
 .swiper-slide {
-  height: 90vh;
-  text-align: center;
-  font-size: 18px;
-  background: #444;
-
-  /* Center slide text vertically */
+  height: 85vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #444;
 }
 
-.swiper-slide img {
-  display: block;
+/* Rasm konteyneri */
+.swiper-img {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* butun ekran balandligi */
+  overflow: hidden;
+}
+
+.swiper-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* rasmni cho‘zmasdan ekranga moslaydi */
+  display: block;
+}
+
+/* Matn ustiga chiqishi uchun */
+.swiper-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  z-index: 2;
+}
+
+/* Qorong‘u overlay */
+.swiper-img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.59);
+  z-index: 1;
+}
+.swiper-info button {
+  width: auto;
+  height: auto;
+  padding: 12px 20px;
+  background-color: #fe653d;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 50px;
+}
+
+@media (max-width: 870px) {
+  .swiper-info button {
+    font-size: 14px;
+    margin-top: 30px;
+  }
+  .swiper-info {
+    font-size: 28px;
+  }
 }

@@ -35,11 +35,11 @@ function Navbar() {
   return (
     <>
       <header className="navbar">
-        {/* Logo */}
-        <div className="header-left">
           <div className="menu-bar" onClick={handleMenuNavBarClick}>
             <IoMenu />
           </div>
+        {/* Logo */}
+        <div className="header-left">
           <img src={headerlogo} alt="Trip Site Logo" className="logo" />
 
           {/* Rating section */}
@@ -95,6 +95,7 @@ function Navbar() {
           </div> */}
           {/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Nav Bar >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
           <div className={navbar ? "header-nav-menu" : "header-nav"}>
+            <div className="header-nav-menu-div">
             <div className="nav-dev">
               <p>BROWSE TOURS</p>
             </div>
@@ -106,6 +107,7 @@ function Navbar() {
             </div>
             <div className="nav-dev">
               <p>BLOG </p>
+            </div>
             </div>
           </div>
           {/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Nav Bar >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}

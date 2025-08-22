@@ -92,9 +92,14 @@
 
 .header-nav {
   width: 100%;
+}
+.header-nav .header-nav-menu-div{
+  width: 100%;
   display: flex;
   column-gap: 5px;
   justify-content: space-between;
+  color: #fe653d;
+  font-weight: bold;
 }
 .header-nav-menu {
   display: none;
@@ -259,9 +264,9 @@
   }
   .menu-bar {
     display: block;
-    position: fixed;
-    left: 20px;
-    top: 30px;
+    position: relative;
+    left: -160px;
+    top: 40px;
     font-size: 25px;
     color: #fff;
     background-color: #fe653d;
@@ -279,13 +284,32 @@
     width: 40%;
     height: 100vh; /* 🔑 butun ekranni yopish uchun */
     display: block;
-    position: sticky;
+    position: fixed;
     left: 0;
     top: 0;
     background-color: #fe653d;
-    display: block;
-    transition: right 1s ease;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: center;
+    padding: 70px 20px;
     z-index: 9;
+  }
+  .header-nav-menu-div {
+    width: 100%;
+
+  }
+  .header-nav-menu-div div {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    padding: 0px 10px;
+    border-bottom: 1px solid #fff;
+    color: #fff;
   }
 }
 
@@ -356,6 +380,5 @@
   }
   .header-nav-menu {
     width: 70%;
- 
   }
 }
