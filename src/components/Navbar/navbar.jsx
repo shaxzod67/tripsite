@@ -8,6 +8,7 @@ import { MdSms } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import Header from "../Header/header";
 import { IoMenu } from "react-icons/io5";
+import TourTypes from "../TourTypes/tourtypes";
 
 function Navbar() {
   const [contactFormVisible, setContactFormVisible] = useState(false);
@@ -117,6 +118,7 @@ function Navbar() {
       <div className="header-line"></div>
       {contactFormVisible && <ContactForm />}
       <Header />
+      <TourTypes/>
     </>
   );
 }
