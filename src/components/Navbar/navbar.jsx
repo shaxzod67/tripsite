@@ -12,6 +12,8 @@ import TourTypes from "../TourTypes/tourtypes";
 import Collections from "../Collections/collections";
 import Newtour from "../Newtour/newtour";
 import Quality from "../Quality/quality";
+import About from "../About/about";
+import Footer from "../Footer/footer";
 
 function Navbar() {
   const [contactFormVisible, setContactFormVisible] = useState(false);
@@ -30,6 +32,7 @@ function Navbar() {
 
   const handleContactClick = () => {
     setContactFormVisible((prev) => !prev);
+    // onClick={handleContactClick} --> Yuborish funksiyasi
   };
 
   const handleIphone = () => {
@@ -63,9 +66,9 @@ function Navbar() {
         {/* Contact + Input + Language */}
         <div className="header-right">
           <div className="header-contact">
-            <button className="button-contact" onClick={handleContactClick}>
+            <button className="button-contact" >
               <MdSms />
-              Contact
+              <a href="#footer">Contact</a>
             </button>
 
             <button className="button-contact" onClick={handleIphone}>
@@ -125,6 +128,8 @@ function Navbar() {
       <Collections />
       <Newtour />
       <Quality/>
+      <About/>
+      <Footer/>
     </>
   );
 }

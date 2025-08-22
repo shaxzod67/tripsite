@@ -66,7 +66,7 @@ function ContactForm() {
           onChange={(e) => setPhone(e.target.value)}
           required
         />
-        <Button type="primary" htmlType="submit">
+        <Button type="primary" htmlType="submit" >
           Yuborish
         </Button>
       </Space>

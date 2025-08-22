@@ -6,6 +6,8 @@ import TourTypes from "./components/TourTypes/tourtypes";
 import Collections from "./components/Collections/collections";
 import Newtour from "./components/Newtour/newtour";
 import Quality from "./components/Quality/quality";
+import About from "./components/About/about";
+import Footer from "./components/Footer/footer";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route path="/collections" element={<Collections />} />
         <Route path="/newtour" element={<Newtour />} />
         <Route path="/quality" element={<Quality />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/footer" element={<Footer />} />
 
 
 
