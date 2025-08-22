@@ -10,6 +10,7 @@ import Header from "../Header/header";
 import { IoMenu } from "react-icons/io5";
 import TourTypes from "../TourTypes/tourtypes";
 import Collections from "../Collections/collections";
+import Newtour from "../Newtour/newtour";
 
 function Navbar() {
   const [contactFormVisible, setContactFormVisible] = useState(false);
@@ -37,9 +38,9 @@ function Navbar() {
   return (
     <>
       <header className="navbar">
-          <div className="menu-bar" onClick={handleMenuNavBarClick}>
-            <IoMenu />
-          </div>
+        <div className="menu-bar" onClick={handleMenuNavBarClick}>
+          <IoMenu />
+        </div>
         {/* Logo */}
         <div className="header-left">
           <img src={headerlogo} alt="Trip Site Logo" className="logo" />
@@ -98,18 +99,18 @@ function Navbar() {
           {/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Nav Bar >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
           <div className={navbar ? "header-nav-menu" : "header-nav"}>
             <div className="header-nav-menu-div">
-            <div className="nav-dev">
-              <p>BROWSE TOURS</p>
-            </div>
-            <div className="nav-dev">
-              <p>TRIP ESSENTIALS </p>
-            </div>
-            <div className="nav-dev">
-              <p>OUR STORY </p>
-            </div>
-            <div className="nav-dev">
-              <p>BLOG </p>
-            </div>
+              <div className="nav-dev">
+                <p>BROWSE TOURS</p>
+              </div>
+              <div className="nav-dev">
+                <p>TRIP ESSENTIALS </p>
+              </div>
+              <div className="nav-dev">
+                <p>OUR STORY </p>
+              </div>
+              <div className="nav-dev">
+                <p>BLOG </p>
+              </div>
             </div>
           </div>
           {/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Nav Bar >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
@@ -119,8 +120,9 @@ function Navbar() {
       <div className="header-line"></div>
       {contactFormVisible && <ContactForm />}
       <Header />
-      <TourTypes/>
-      <Collections/>
+      <TourTypes />
+      <Collections />
+      <Newtour />
     </>
   );
 }
