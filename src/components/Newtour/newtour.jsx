@@ -28,10 +28,9 @@ function Newtour() {
               <button>VIEW TOUR</button>
             </div>
             <div className="newtour-info">
-              Our bike and barge tours throughout Europe are the best way to
-              travel and will be an experience you will never forget! The bike
-              is your means to pedal the back roads of countries and cultures
-              and the boat is your unique accommodations throughout your tour.
+              Tucked between Greece and Montenegro, Albania quietly holds some
+              of the most unspoiled landscapes in Europe. You’ll find mountain
+              roads without traffic, coastline without crowds, and stone towns…
             </div>
           </div>
 
@@ -47,10 +46,10 @@ function Newtour() {
               <button>VIEW TOUR</button>
             </div>
             <div className="newtour-info">
-              Our bike and barge tours throughout Europe are the best way to
-              travel and will be an experience you will never forget! The bike
-              is your means to pedal the back roads of countries and cultures
-              and the boat is your unique accommodations throughout your tour.
+              Aboard the tall ship, Atlantis, sail through Denmark and Sweden
+              via ancient trade routes to coastal cities, idyllic islands, and
+              rolling countryside. From Copenhagen, travel the narrow Øresund
+              Strait…
             </div>
           </div>
 
@@ -66,10 +65,9 @@ function Newtour() {
               <button>VIEW TOUR</button>
             </div>
             <div className="newtour-info">
-              Our bike and barge tours throughout Europe are the best way to
-              travel and will be an experience you will never forget! The bike
-              is your means to pedal the back roads of countries and cultures
-              and the boat is your unique accommodations throughout your tour.
+              Zambia is an exceptional choice for a safari, offering spectacular
+              wildlife viewing, captivating scenery, and raw beauty. This
+              tailored safari showcases three iconic spots: Victoria Falls in…
             </div>
           </div>
 
@@ -85,10 +83,10 @@ function Newtour() {
               <button>VIEW TOUR</button>
             </div>
             <div className="newtour-info">
-              Our bike and barge tours throughout Europe are the best way to
-              travel and will be an experience you will never forget! The bike
-              is your means to pedal the back roads of countries and cultures
-              and the boat is your unique accommodations throughout your tour.
+              Cycle by day, sail by night, and experience Greece like never
+              before! This adventure blends the thrill of cycling with the
+              elegance of a traditional sailing yacht, carrying you to medieval
+              towns and…
             </div>
           </div>
           <div className="newtour-img">
@@ -103,10 +101,10 @@ function Newtour() {
               <button>VIEW TOUR</button>
             </div>
             <div className="newtour-info">
-              Our bike and barge tours throughout Europe are the best way to
-              travel and will be an experience you will never forget! The bike
-              is your means to pedal the back roads of countries and cultures
-              and the boat is your unique accommodations throughout your tour.
+              Experience Greece by e-bike and boat as the sea takes you to some
+              of the most stunning corners of the Aegean. Over the course of a
+              week, you’ll explore the enchanting Sporades Islands, alongside
+              the…
             </div>
           </div>
           <div className="newtour-img">
@@ -121,10 +119,9 @@ function Newtour() {
               <button>VIEW TOUR</button>
             </div>
             <div className="newtour-info">
-              Our bike and barge tours throughout Europe are the best way to
-              travel and will be an experience you will never forget! The bike
-              is your means to pedal the back roads of countries and cultures
-              and the boat is your unique accommodations throughout your tour.
+              This guided cycle tour follows Vietnam’s south-central coast from
+              the busy streets of Ho Chi Minh City to the historic city of Hue.
+              From the Central Highlands to the coast, French-built hill towns…
             </div>
           </div>
         </div>
