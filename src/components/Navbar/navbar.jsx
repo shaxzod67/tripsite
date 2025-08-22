@@ -11,6 +11,7 @@ import { IoMenu } from "react-icons/io5";
 import TourTypes from "../TourTypes/tourtypes";
 import Collections from "../Collections/collections";
 import Newtour from "../Newtour/newtour";
+import Quality from "../Quality/quality";
 
 function Navbar() {
   const [contactFormVisible, setContactFormVisible] = useState(false);
@@ -123,6 +124,7 @@ function Navbar() {
       <TourTypes />
       <Collections />
       <Newtour />
+      <Quality/>
     </>
   );
 }

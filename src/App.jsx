@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TourTypes from "./components/TourTypes/tourtypes";
 import Collections from "./components/Collections/collections";
 import Newtour from "./components/Newtour/newtour";
+import Quality from "./components/Quality/quality";
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         <Route path="/tourtypes" element={<TourTypes />} />
         <Route path="/collections" element={<Collections />} />
         <Route path="/newtour" element={<Newtour />} />
+        <Route path="/quality" element={<Quality />} />
+
 
 
       </Routes>
