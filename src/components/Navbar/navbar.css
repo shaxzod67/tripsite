@@ -254,7 +254,9 @@
     color: #fe653d;
     border: 1px solid #fe653d;
   }
-
+ .button-contact a{
+  color: #fe653d;
+ }
   .button-contact:hover {
     box-shadow: 0 0 12px rgba(106, 105, 105, 0.5);
     border: 1px solid #fff;
