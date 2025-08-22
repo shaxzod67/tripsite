@@ -9,6 +9,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import Header from "../Header/header";
 import { IoMenu } from "react-icons/io5";
 import TourTypes from "../TourTypes/tourtypes";
+import Collections from "../Collections/collections";
 
 function Navbar() {
   const [contactFormVisible, setContactFormVisible] = useState(false);
@@ -119,6 +120,7 @@ function Navbar() {
       {contactFormVisible && <ContactForm />}
       <Header />
       <TourTypes/>
+      <Collections/>
     </>
   );
 }
