@@ -1,8 +1,14 @@
-import React, { useRef, useState } from "react";
-import { Virtual, Navigation, Pagination, Autoplay } from "swiper/modules";
+import React, { useState } from "react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
+import collImg1 from "./collimg1.webp";
+import collImg2 from "./collimg2.webp";
+import collImg3 from "./collimg3.webp";
+import collImg4 from "./collimg4.webp";
+import collImg5 from "./collimg5.webp";
+
+// Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -10,69 +16,43 @@ import "swiper/css/navigation";
 import "./collections.css";
 
 function Collections() {
-  const [swiperRef, setSwiperRef] = useState(null);
-  const appendNumber = useRef(500);
-  const prependNumber = useRef(1);
-
-  const [slides, setSlides] = useState(
-    Array.from({ length: 10 }).map((_, index) => `Slide ${index + 1}`)
-  );
-
-  const prepend = () => {
-    setSlides([
-      `Slide ${prependNumber.current - 2}`,
-      `Slide ${prependNumber.current - 1}`,
-      ...slides,
-    ]);
-    prependNumber.current = prependNumber.current - 2;
-    swiperRef.slideTo(swiperRef.activeIndex + 2, 0);
-  };
-
-  const append = () => {
-    setSlides([...slides, "Slide " + ++appendNumber.current]);
-  };
-
-  const slideTo = (index) => {
-    swiperRef.slideTo(index - 1, 0);
-  };
-
+  const [slides] = useState([
+    { id: 1, img: collImg1, title: "Beautiful Mountain" },
+    { id: 2, img: collImg2, title: "Sunny Beach" },
+    { id: 3, img: collImg3, title: "City Lights" },
+    { id: 4, img: collImg4, title: "Calm Lake" },
+    { id: 5, img: collImg5, title: "Green Forest" },
+  ]);
   return (
     <>
-      <Swiper className="swiper-collection"
-        modules={[Virtual, Navigation, Pagination, Autoplay]}
-        onSwiper={setSwiperRef}
-        slidesPerView={3}
-        centeredSlides={true}
+    <div className="colliction-sar">Collections</div>;
+      <Swiper
+        className="swiper-collection"
+        modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={30}
-        pagination={{
-          type: "fraction",
-        }}
+        centeredSlides={true}
+        pagination={{ type: "fraction" }}
         navigation={true}
-        virtual
         autoplay={{
-          delay: 3000, // 3 sekundda bitta slide
-          disableOnInteraction: false, // foydalanuvchi manual o'tkazganda ham autoplay davom etadi
+          delay: 2000,
+          disableOnInteraction: false,
         }}
-        loop={true} // cheksiz aylanishi uchun
+        loop={true}
+        breakpoints={{
+          0: { slidesPerView: 1 }, // 📱 Telefon
+          700: { slidesPerView: 2 }, // 📲 Planshet
+          1024: { slidesPerView: 3 }, // 💻 Desktop
+        }}
       >
-        {slides.map((slideContent, index) => (
-          <SwiperSlide key={slideContent} virtualIndex={index}>
-            {slideContent}
+        {slides.map((slide) => (
+          <SwiperSlide key={slide.id}>
+            <div className="slide-item">
+              <img src={slide.img} alt={slide.title} />
+              <p>{slide.title}</p>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
-
-      <p className="append-buttons">
-        {/* <button onClick={() => prepend()} className="prepend-2-slides">
-          Prepend 2 Slides
-        </button> */}
-        {/* <button onClick={() => slideTo(1)} className="prepend-slide">
-          Slide 1
-        </button> */}
-        {/* <button onClick={() => slideTo(10)} className="slide-250">
-          Slide 10
-        </button> */}
-      </p>
     </>
   );
 }

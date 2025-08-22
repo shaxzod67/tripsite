@@ -75,6 +75,7 @@ function TourTypes() {
           </div>
         </div>
       </div>
+      
     </div>
   );
 }
