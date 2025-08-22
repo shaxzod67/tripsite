@@ -68,7 +68,20 @@
     font-size: 14px;
     margin-top: 30px;
   }
+  
   .swiper-info {
     font-size: 28px;
+    left: 50%;
+  }
+}
+@media (max-width: 500px) {
+  .swiper-info button {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  .swiper-info {
+    font-size: 24px;
+    left: 50%;
   }
 }
