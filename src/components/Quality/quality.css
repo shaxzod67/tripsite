@@ -7,7 +7,6 @@
   justify-content: center;
   margin-top: 100px;
   text-align: center;
-  border: 1px solid red;
   background: #eff8f7;
   color: #666;
 }
@@ -17,7 +16,6 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  border: 1px solid black;
 }
 .quality-div h2 {
   width: 100%;
@@ -30,8 +28,6 @@
 }
 .quality-reyting {
   width: 40%;
-
-  border: 1px solid red;
 }
 .quality-stars {
   width: 100%;
@@ -39,11 +35,9 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  border: 1px solid purple;
 }
 .quality-stars p {
   width: 100%;
-  border: 1px solid red;
   text-align: center;
 }
 .quality-stars path {
